@@ -2,6 +2,8 @@
 import PrimaryButton from '@/components/button/PrimaryButton.vue'
 import StepNavigation from '@/components/button/StepButton.vue'
 import RestartButton from '@/components/button/RestartButton.vue'
+import OptionButton from '@/components/button/OptionButtion.vue'
+import LanguageOptionButton from '@/components/button/LanguageOptionButton.vue'
 import { useRouter } from 'vue-router'
 const router = useRouter()
 
@@ -31,6 +33,10 @@ function goNext() {
 
   <RestartButton @click="router.push('/start')"> Restart </RestartButton>
   <RestartButton disabled> Disabled </RestartButton>
+
+  <LanguageOptionButton @click="router.push('/start')"> English </LanguageOptionButton>
+
+  <OptionButton @click="router.push('/start')"> Option 1 </OptionButton>
 </template>
 
 <style scoped>
