@@ -67,7 +67,7 @@ const stepVariant = computed<'default' | 'active' | 'disabled'>(() => {
   return 'default'
 })
 
-/** 进度条：总宽 334px（按你的设计稿） */
+/** 进度条：总宽 334px（按设计稿） */
 const progressTotal = 334
 const progressWidthPx = computed(() => {
   const step = (currentIndex.value + 1) / questions.length
@@ -84,6 +84,7 @@ const birdLeftPx = computed(() => {
 
 <template>
   <div class="screen">
+    <img src="@/assets/images/icon/progressicon.svg" class="bird" alt="bird" />
     <!-- Status bar（占位） -->
     <div class="statusbar">
       <div class="time">9:41</div>
@@ -307,8 +308,7 @@ const birdLeftPx = computed(() => {
   top: -2px;
   width: 24px;
   height: 16px;
-  background: #766630;
-  border-radius: 6px;
+  z-index: 10;
 }
 
 /* Title */

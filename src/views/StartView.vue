@@ -20,10 +20,10 @@ function goNext() {
 </script>
 
 <template>
-  <div class="start" @click="goQuiz">
+  <div class="start">
     <h1>Start Page</h1>
   </div>
-  <img class="card" src="@/assets/images/card/FlipTaroCardfront.svg" alt="" />
+  <img class="card" @click="goQuiz" src="@/assets/images/card/FlipTaroCardfront.svg" alt="" />
   <img class="card" src="@/assets/images/card/FlipTaroCardback.svg" alt="" />
 
   <PrimaryButton @click="router.push('/start')"> Start </PrimaryButton>
