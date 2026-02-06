@@ -28,7 +28,7 @@ defineProps<{
 
   display: inline-flex; /* ✅ flex */
   align-items: center;
-  justify-content: center; /* 内容整体居中 */
+  justify-content: space-between;
   gap: 8px;
   cursor: pointer;
   user-select: none;
