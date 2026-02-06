@@ -1,9 +1,33 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import PrimaryButton from '@/components/button/PrimaryButton.vue'
+import StepNavigation from '@/components/button/StepButton.vue'
+import { useRouter } from 'vue-router'
+const router = useRouter()
+
+function goPrev() {
+  console.log('Go to previous step')
+}
+
+function goNext() {
+  console.log('Go to next step')
+}
+</script>
 
 <template>
   <div class="start">
     <h1>Start Page</h1>
   </div>
+
+  <PrimaryButton @click="router.push('/start')"> Start </PrimaryButton>
+
+  <PrimaryButton disabled> Disabled </PrimaryButton>
+
+  <StepNavigation variant="default" @prev="goPrev" @next="goNext" />
+  <StepNavigation variant="active" @prev="goPrev" @next="goNext" />
+  <StepNavigation variant="disabled" />
+
+  <!-- 或只禁用某一边 -->
+  <StepNavigation variant="default" prevDisabled @next="goNext" />
 </template>
 
 <style scoped>
